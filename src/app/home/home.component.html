@@ -1,0 +1,26 @@
+﻿
+<h4 class="card-header">You're logged in to our institute</h4>
+<h1>This is the list of our departement</h1>
+<ul class="nav">
+
+    <li class="nav-item">
+     
+      <button (click)="selectMode('departement')" class="nav-link active">Departement</button>
+    </li>
+    <li class="nav-item">
+        <button (click)="selectMode('classes')" class="nav-link active">Classes</button>
+    </li>
+    <li class="nav-item">
+        <button (click)="selectMode('students')" class="nav-link active" >Students</button>
+    </li>
+
+  </ul>
+  <div *ngIf="mode== 'departement'" class="card-body">
+   <app-departement></app-departement>
+</div>
+<div *ngIf="mode== 'classes'" class="card-body">
+      <app-classe></app-classe>
+ </div>
+ <div *ngIf="mode== 'students'" class="card-body">
+    <app-student></app-student>
+ </div>

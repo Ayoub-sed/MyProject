@@ -1,0 +1,20 @@
+<h1>This is the list of our students</h1>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Student Name</th>
+        <th scope="col">Student Departement</th>
+        <th scope="col">Student classes</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr *ngFor="let student of students">
+        <th scope="row">{{student.id}}</th>
+        <td>{{student.studentName}}</td>
+        <td>{{student.classe.departement.departementName}}</td>
+        <td>{{student.classe.classeName}}</td>
+      </tr>
+    </tbody>
+  </table>
